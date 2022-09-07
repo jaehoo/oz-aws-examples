@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>org.oz.demo</groupId>
+  <artifactId>oz-aws-examples</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <packaging>pom</packaging>
+
+  <name>oz-aws-examples</name>
+  <description>A project with examples to show how to use the AWS SDK.</description>
+  <url>https://jaehoo.wordpress.com/</url>
+
+  <modules>
+    <module>sts-examples</module>
+  </modules>
+
+  <properties>
+    <junit.vesrion>4.11</junit.vesrion>
+    <slf4j.version>1.7.5</slf4j.version>
+    <awssdk.version>2.17.233</awssdk.version>
+  </properties>
+
+  <organization>
+    <name>Orbital Zero</name>
+    <url>https://jaehoo.wordpress.com/</url>
+  </organization>
+
+  <developers>
+    <developer>
+      <id>dev1</id>
+      <name>jaehoo</name>
+      <organization>Orbital Zero</organization>
+    </developer>
+  </developers>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>junit</groupId>
+        <artifactId>junit</artifactId>
+        <version>${junit.vesrion}</version>
+        <scope>test</scope>
+      </dependency>
+
+      <dependency>
+        <groupId>org.slf4j</groupId>
+        <artifactId>slf4j-api</artifactId>
+        <version>${slf4j.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.slf4j</groupId>
+        <artifactId>slf4j-simple</artifactId>
+        <version>${slf4j.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.slf4j</groupId>
+        <artifactId>jcl-over-slf4j</artifactId>
+        <version>${slf4j.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.slf4j</groupId>
+        <artifactId>log4j-over-slf4j</artifactId>
+        <version>${slf4j.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.slf4j</groupId>
+        <artifactId>jul-to-slf4j</artifactId>
+        <version>${slf4j.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>software.amazon.awssdk</groupId>
+        <artifactId>sts</artifactId>
+        <version>${awssdk.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>software.amazon.awssdk</groupId>
+        <artifactId>sqs</artifactId>
+        <version>${awssdk.version}</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
+</project>
